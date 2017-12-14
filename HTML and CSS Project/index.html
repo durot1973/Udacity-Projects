@@ -1,0 +1,114 @@
+<!-- This is an HTML comment. Comments allow you to communicate with other programmers using
+text that will be ignored by the computer! -->
+<!DOCTYPE html> <!-- The DOCTYPE tells the browser what kind of document this is (HTML) -->
+<html lang="en">
+<head> <!-- The head tag includes important information about the page -->
+  <meta charset="UTF-8"> <!-- This line defines something called "character encoding"
+  This will allow the browser to display certain characters (such as non-Roman letters) correctly.
+  You should include this line in the head of all of your webpages. -->
+  <title>My Notes</title> <!-- This is the title of your page (what appears in the name of a browser tab) -->
+  <link rel="stylesheet" href="style.css"> <!-- This line links your CSS stylesheet to your HTML (see Lesson 1.3) -->
+</head>
+    <h2>Table of Contents</h2>
+    <nav>
+        <b><a href="#www">World Wide Web</a></b> |
+        <b><a href="#tagsinhtml">Tags</a></b> |
+        <b><a href="#tagsinhtml">Tags</a></b> |
+        <b><a href="#structure">Structure of HTML 5 Documents</a></b> |
+        <b><a href="#css">CSS</a></b> |
+        <b><a href="#learn">WANNA LEARN!</a></b>
+    </nav>
+  <section id="www">
+    <h2>World Wide Web</h2>
+    <p>
+    The world wide web is made up of documents in the html format. They can also have links to images and video
+    as we would see later .
+    </p>
+  </section>
+  <article id="tagsinhtml" class="content">
+    <h2>Tags</h2>
+    <section>
+        <p>
+          Tags are used to tell your browser what to display. Tags usually have opening and closing ones but there are exceptions. The text between the tags is called content
+          There are two types of tags:
+        </p>
+      <ol>
+        <li>There are the normal ones that have opening and closing tags and then the content in between them.
+            an example is &lt;p &gt; combined with &lt;/p &gt;</li>
+        <li>Those that have only one tag e.g img tags these are called void tags. These void tags have no content.
+            an example is &lt;img scr=""&gt;</li>
+       </ol>
+      <p>
+        <b>About tags</b>
+      </p>
+      <ol>
+        <li>HTML tags create elements, so an opening tag and a closing one together with the content is called an element.
+        </li>
+        <li>Each tag has a name and a type, that determines what would be created.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Attributes</h2>
+      <p>
+      Note that tags have attributes that e.g link other websites or documents like this
+      Facebook link -> <em> <a href="http://facebook.com">Facebook</a></em> which is written as &lt;a href="http://facebook.com"&gt;Facebook&lt;/a&gt;
+      </p>
+    </section>
+  </article>
+  <section id="structure" class="content">
+    <h2>Structure of HTML documents</h2>
+    <p>
+      When writing html code you should follow a structure to make it easy for other people to understand the code you write.
+    </p>
+  </section>
+  <article class="important">
+    <h2>Notes:</h2>
+      <p>You code for other people and for the future you not just for the computer.
+      That is why code structures exist because it is important to write code that is readable.
+      i.e code that other people can read and understand.</p>
+  </article>
+  <section class="content">
+    <h2>HTML-CSS-DOM</h2>
+      <ul>
+        <li>It is important to note that HTML is a language in its own right with its syntax and rules.</li>
+        <li>CSS is another language that is used to change how HTML documents look like in the browser with its own unique
+            syntax and rules.</li>
+        <li>While the DOM is a standard convention for writing html documents.</li>
+      </ul>
+    <p>So note that while HTML determines the structure of the page, CSS determines the style or look of the page while DOM just says which part of the html code should be writen first.</p>
+  </section>
+  <section>
+    <h3>Illustration of DOM</h3>
+    <img src="pic_htmltree.gif" alt="picture of what the DOM is">
+    <footer>Picture of how the DOM works.</footer>
+  </section>
+  <section id="css" class="content">
+    <h2>CSS - Cascading Style Sheets</h2>
+    <p>
+      CSS as mentioned before is used to determine how the webpage looks e.g the colour of the text, the size of the font etc.
+    </p>
+  </section>
+  <section>
+    <h2>Boxes</h2>
+    <p>
+      one thing to note is that everything in html is a box.
+    </p>
+  </section>
+  <footer id="learn" class="important">
+    <h2>And Finally</h2>
+    <p> 
+      Of course, this is all possible due to my Intro to Programming Nanodegree course at <a href="http://udacity.com">Udacity</a> so if you wanna learn how to make even better pages click below and look especially for their Frontend Developer Nanodegree, but there are other free courses there that you can use to brush up your skils, 
+    </p>
+    <p>
+      you can also check
+    </p>
+    <ul>
+        <li><a href="http://coursera.org">Coursera.org</a></li>
+        <li><a href="http://udemy.com">Udemy</a></li>
+     </ul>
+    <p>
+      or just <a href="http://google.com">Google</a> it. These are all online resources that you can use to learn.
+    </p>
+  </footer>
+</body>
+</html>
