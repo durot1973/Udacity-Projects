@@ -1,4 +1,4 @@
-x
+
 # For this project, you'll be building a Fill-in-the-Blanks quiz.
 # Your quiz will prompt a user with a paragraph containing several blanks.
 # The user should then be asked to fill in each blank appropriately to complete the paragraph.
@@ -129,7 +129,7 @@ def progress_game(level_chosen):
 	Output: None
 	'''
 	game_level = game_levels[level_chosen]
-	return game(game_level['phrase'], game_level['answers'], level_chosen)
+	return game(level_chosen, game_level['phrase'], game_level['answers'])
 
 
 # Initialize the game.
