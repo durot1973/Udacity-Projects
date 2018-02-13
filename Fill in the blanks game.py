@@ -8,9 +8,6 @@
 # Your game should consist of 3 or more levels, so you should add your own paragraphs as well!
 
 
-import string
-
-
 # first we define the functions necessary for the code to run.
 
 def introduction():
@@ -23,12 +20,12 @@ def introduction():
 	levels = ['easy', 'medium', 'hard']
 
 	while level_chosen not in levels:
-		print 'Please select a game difficulty by typing it in!'
-		print 'Possible choices include easy, medium and hard'
-		level_chosen = raw_input()
+		print('Please select a game difficulty by typing it in!')
+		print('Possible choices include easy, medium and hard')
+		level_chosen = input()
 		level_chosen = level_chosen.lower()
 		if level_chosen not in levels:
-			print "That's not an option!"
+			print("That's not an option!")
 	else:
 		return level_chosen
 
@@ -52,8 +49,7 @@ def toSubstitute(replacement, space, paragraph):
 	'''
 	assert '__' in space
 	if space in paragraph:
-		sub_paragraph = string.replace(paragraph, space, replacement)
-	return sub_paragraph
+		return paragraph.replace(space, replacement)
 
 
 def identifySubstitute(paragraph):
@@ -74,25 +70,25 @@ def game(level_chosen, paragraph, answers):
 	Output: None
 	'''
 	guesses, user_input, substitute_paragraph, index = 5, '', paragraph[:], 0
-	print 'You have chosen ' + level_chosen + '!' + '\n  ' + '\nYou will get ' + str(guesses) + ' guesses per problem' + '\n '
+	print('You have chosen ' + level_chosen + '!' + '\n  ' + '\nYou will get ' + str(guesses) + ' guesses per problem' + '\n ')
 	
 	while not isSubstituted(paragraph):
 		substitute_word, last_guess = identifySubstitute(paragraph), 1
-		print 'The current paragraph reads as such:' + '\n' + substitute_paragraph + '\n' 
-		user_input = (raw_input('What should be substituted in for ' + substitute_word + '?')).lower()
+		print('The current paragraph reads as such:' + '\n' + substitute_paragraph + '\n' )
+		user_input = (input('What should be substituted in for ' + substitute_word + '? ')).lower()
 		
 		if user_input in answers[index]:
-			print '\nCorrect!'
+			print('\nCorrect!')
 			substitute_paragraph, paragraph, index = toSubstitute(user_input, substitute_word, paragraph), toSubstitute(user_input, substitute_word, paragraph), index + 1
 		else:
 			guesses -= 1
 			if guesses < last_guess:
 				break
 			else:
-				print "\nThat's not the correct answer: Let's try again; you have %g try left" %guesses
+				print("\nThat's not the correct answer: Let's try again; you have {} try left".format(guesses))
 
 	if isSubstituted(paragraph):
-		print substitute_paragraph + '\nYou won!'
+		print(substitute_paragraph + '\nYou won!')
 
 # Then the games variables for the diffrent levels.
 
@@ -114,7 +110,7 @@ game_levels = {'easy': { 'phrase': '''A common first thing to do in a language i
  	 the value to return. ___2___ can be standard data types such as string,
  	 number, dictionary, tuple, and ___4___ or can be more complicated such
  	 as objects and lambda functions.''', 
- 	'answers': ('function', 'argument', 'none', 'list')},
+ 	'answers': ('function', 'arguments', 'none', 'list')},
  
  'hard': {'phrase': '''When you create a ___1___, certain ___2___ are 
  	automatically generated for you if you don't make them manually. An 
@@ -136,4 +132,4 @@ def progress_game(level_chosen):
 level_chosen = introduction()
 
 if level_chosen != None:
-	progress_game(level_chosen)
+    progress_game(level_chosen)
